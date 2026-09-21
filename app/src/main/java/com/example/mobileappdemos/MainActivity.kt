@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.material3.Surface
+import com.example.mobileappdemos.exercise.Exercise2Counter
 import com.example.mobileappdemos.ui.theme.MobileappdemosTheme
 
 import com.example.mobileappdemos.exercise.StaticProfile
@@ -16,7 +17,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             MobileappdemosTheme {
                 Surface{
-                    StaticProfile();
+                    StaticProfile()
+                }
+
+                Surface{
+                    Exercise2Counter()
                 }
             }
         }
