@@ -16,36 +16,3 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
-@Composable
-fun Exercise3NameInput() {
-
-    var name by remember { mutableStateOf("") }
-
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(24.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
-    ) {
-        OutlinedTextField(
-            value = name,
-            onValueChange = { name = it },
-            label = { Text("Student name") },
-            modifier = Modifier.fillMaxWidth()
-        )
-
-        if (name.isBlank()) {
-            Text("Enter your name")
-        } else {
-            Text("Welcome, $name")
-        }
-
-        Text("Characters entered: ${name.length}")
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-private fun Exercise3Preview() {
-    Exercise3NameInput()
-}
